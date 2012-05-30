@@ -21,7 +21,6 @@ public class Contato {
 	private String cidade;
 	private String estado;
 	private String pais;
-	
 
 	public long getId() {
 		return id;

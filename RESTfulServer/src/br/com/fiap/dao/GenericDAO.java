@@ -171,6 +171,7 @@ public abstract class GenericDAO<T> {
 			obj = em.find(classe, id);
 
 			em.remove(obj);
+			
 			t.commit();
 			result = true;
 
