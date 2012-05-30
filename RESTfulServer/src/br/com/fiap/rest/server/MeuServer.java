@@ -54,11 +54,8 @@ public class MeuServer extends ServerResource {
 		
 		Contato contato = new Contato();
 		ObjectMapper mapper = new ObjectMapper();
-		String teste = form.getNames().toString();
-		System.out.println("quanto vale" + teste.replace("[", "").replace("]", ""));
-		teste=   teste.replace("[", "").replace("]", "");
-		
-		contato = mapper.readValue( teste.replace("[", "").replace("]", ""),Contato.class);
+				
+		contato = mapper.readValue( form.getNames().toString().replace("[", "").replace("]", ""),Contato.class);
 		
 		System.out.println("Contato email " + contato.getEmail());
 		System.out.println("Contato nome " + contato.getNome());
