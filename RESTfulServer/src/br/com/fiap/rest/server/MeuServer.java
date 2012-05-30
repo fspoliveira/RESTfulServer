@@ -1,5 +1,7 @@
 package br.com.fiap.rest.server;
 
+
+
 import java.io.IOException;
 import java.util.Set;
 
@@ -15,6 +17,8 @@ import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
 import org.restlet.resource.ServerResource;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.fiap.bean.Contato;
 
@@ -39,7 +43,7 @@ public class MeuServer extends ServerResource {
 		return true;
 	}
 	
-	@Post("json")
+	@Post
 	public void fazPost (Representation rep) throws IOException, JSONException{
 		Form form = new Form(rep);
 		System.out.println("Executei o POST");
@@ -48,10 +52,16 @@ public class MeuServer extends ServerResource {
 		getResponse().setStatus(Status.SUCCESS_ACCEPTED);
 		getResponse().setEntity(represposta);
 		
-		JsonConverter jc = new JsonConverter();
-		//Contato c = jc.toObject(rep,Contato.class, null);
+		Contato contato = new Contato();
+		ObjectMapper mapper = new ObjectMapper();
+		String teste = form.getNames().toString();
+		System.out.println("quanto vale" + teste.replace("[", "").replace("]", ""));
+		teste=   teste.replace("[", "").replace("]", "");
 		
-		//System.out.println(c.getEmail());
+		contato = mapper.readValue( teste.replace("[", "").replace("]", ""),Contato.class);
+		
+		System.out.println("Contato email " + contato.getEmail());
+		System.out.println("Contato nome " + contato.getNome());
 		
 	}
 	
