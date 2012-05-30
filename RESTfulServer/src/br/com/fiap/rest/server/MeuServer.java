@@ -33,7 +33,7 @@ public class MeuServer extends ServerResource {
 		return true;
 	}
 	
-	@Post
+	@Post("json")
 	public void fazPost (Representation rep){
 		Form form = new Form(rep);
 		System.out.println("Executei o POST");
