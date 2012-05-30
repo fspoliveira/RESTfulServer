@@ -14,6 +14,9 @@
 	<classpathentry kind="lib" path="lib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="lib/sqlite-hibernate-dialect.jar"/>
 	<classpathentry kind="lib" path="lib/sqlitejdbc-v056.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.0.2.jar"/>
 	<classpathentry kind="src" path="/RESTfulClient"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
