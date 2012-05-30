@@ -4,14 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Classe bean que representa um Contato.
  */
 @Entity
-@XmlRootElement(name="contato")
 public class Contato {	
 	
 	@Id
@@ -25,7 +22,7 @@ public class Contato {
 	private String estado;
 	private String pais;
 	
-	@XmlAttribute(name="id")
+
 	public long getId() {
 		return id;
 	}
