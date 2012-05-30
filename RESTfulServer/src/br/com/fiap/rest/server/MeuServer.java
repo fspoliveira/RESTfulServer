@@ -49,7 +49,7 @@ public class MeuServer extends ServerResource {
 		getResponse().setEntity(represposta);
 		
 		JsonConverter jc = new JsonConverter();
-		//Contato c = jc.toObject(rep,Contato.class,null);
+		//Contato c = jc.toObject(rep,Contato.class, null);
 		
 		//System.out.println(c.getEmail());
 		
