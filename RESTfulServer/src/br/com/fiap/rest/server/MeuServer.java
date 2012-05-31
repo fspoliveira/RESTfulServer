@@ -56,6 +56,7 @@ public class MeuServer extends ServerResource {
 
 		System.out.println("Contato email " + contato.getEmail());
 		System.out.println("Contato nome " + contato.getNome());
+		System.out.println("Contato nome " + contato.getCidade());
 
 	}
 }
