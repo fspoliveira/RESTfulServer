@@ -3,7 +3,6 @@ package br.com.fiap.dao;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -171,7 +170,7 @@ public abstract class GenericDAO<T> {
 			obj = em.find(classe, id);
 
 			em.remove(obj);
-			
+
 			t.commit();
 			result = true;
 
