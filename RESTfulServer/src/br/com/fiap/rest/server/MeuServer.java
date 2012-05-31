@@ -1,6 +1,8 @@
 package br.com.fiap.rest.server;
 
 import java.io.IOException;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.restlet.Server;
 import org.restlet.data.Form;
@@ -45,9 +47,12 @@ public class MeuServer extends ServerResource {
 
 		Contato contato = new Contato();
 		ObjectMapper mapper = new ObjectMapper();
+		JSONArray array = new JSONArray(form.getNames().toString());
+		
+		contato = mapper.readValue(array.get(0).toString(), Contato.class);
 
-		contato = mapper.readValue(form.getNames().toString().replace("[", "")
-				.replace("]", ""), Contato.class);
+		/*contato = mapper.readValue(form.getNames().toString().replace("[", "")
+				.replace("]", ""), Contato.class);*/
 
 		System.out.println("Contato email " + contato.getEmail());
 		System.out.println("Contato nome " + contato.getNome());
