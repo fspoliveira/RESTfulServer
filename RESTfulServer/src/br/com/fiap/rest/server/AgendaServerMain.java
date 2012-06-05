@@ -1,6 +1,7 @@
 package br.com.fiap.rest.server;
 
 import org.restlet.Component;
+import org.restlet.Server;
 import org.restlet.data.Protocol;
 
 import br.com.fiap.rest.AgendaApplication;
@@ -22,10 +23,20 @@ public class AgendaServerMain {
     public static void main(String[] args) throws Exception {
 
     	Component component = new Component();
+    	
+    	Server server = new Server(Protocol.HTTP, SERVER_TCP_PORT);
+    	
+      // server.getContext().getParameters().add("maxTotalConnections", "50");
+        
+       
 
-    	component.getServers().add(Protocol.HTTP, SERVER_TCP_PORT);
+    	component.getServers().add(server);
+    	
+    	 server.getContext().getParameters().add("maxThreads", "512");
         component.getDefaultHost().attach("/agenda",
         		new AgendaApplication());
+        
+ 
 
         component.start();
     }
