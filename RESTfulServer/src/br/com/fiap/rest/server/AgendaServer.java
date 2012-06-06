@@ -10,7 +10,7 @@ import br.com.fiap.rest.AgendaApplication;
  * Classe Principal de um Servidor REST Agenda. 
  * Esta classe implementa um servidor standalone baseado em Restlet.
  */
-public class AgendaServerMain {
+public class AgendaServer {
 
 	private final static int SERVER_TCP_PORT = 9000;
 	
