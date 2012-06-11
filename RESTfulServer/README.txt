@@ -2,8 +2,8 @@
 APRESENTAÃ‡ÃƒO
 ============================================================================================================================
 
-RESTfulServer Ã© um programa desenvolvido em RESTful com o Framework RESTlet
-O servidor estÃ¡ apto a receber requsiÃ§Ãµes em JSON e armazenar no banco de dados do SQLLite, usando JPA para persistáº½ncia
+RESTfulServer é um programa desenvolvido em RESTful com o Framework RESTlet
+O servidor está apto a receber requisições em JSON e armazenar no banco de dados do SQLLite, usando JPA para persistência
 
 ==============================================================================================================================
 TECNOLOGIAS
@@ -19,7 +19,7 @@ TECNOLOGIAS
   SQLLite       - http://sqlite.org
 
 ============================================================================================================================
-OPERAÃ‡Ã•ES SUPORTADAS PELA AGENDA DE CONTATOS
+OPERAÇÕES SUPORTADAS PELA AGENDA DE CONTATOS
 ============================================================================================================================
 
 a) Inserir um contato
@@ -28,7 +28,7 @@ c) Consultar um contato pelo e-mail
 d) Listar todos os contatos
 
 ============================================================================================================================
-EXECUÃ‡ÃƒO DO SERVIDOR
+EXECUÇÃO DO SERVIDOR
 ============================================================================================================================
 
-br.com.fiap.rest.server.AgendaServer mÃ©todo main
+br.com.fiap.rest.server.AgendaServer método main
